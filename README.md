@@ -1,19 +1,37 @@
-
-# Haystack Pipeline Architect
+# Insurance Policy Q&A Assistant
 
 ![Demo Screenshot](demo/screenshot.png)
 
 ## Overview
-Turn composable retrieval and generation pipelines into a product-grade architecture surface with routing, testing, and pipeline observability.
 
-This project is part of a 50-project portfolio covering data science, AI, LLM, RAG, and product analytics use cases across finance, health, retail, cybersecurity, developer tools, and enterprise workflows.
+Help claims and underwriting teams retrieve policy clauses, exclusions, and evidence-backed guidance from policy manuals and endorsements.
 
-## Project Profile
-- Domain: Production LLM Pipelines
+## Real-world problem
+
+- User: Claims reviewers and underwriters
+- Problem: Teams lose time searching policy endorsements, exclusions, and adjuster guidance while claims sit in queue.
+- Decision improved: Return the right clause and recommended next action for each claim scenario.
+- KPI target: Lower claim handling time and reduce coverage misinterpretation.
+
+## Why this matters
+
+This repo is positioned as a real product for a real team, not a framework-only demo. The goal is to show how research-backed AI, analytics, or graph systems become deployable workflows with docs, UI, screenshots, and business-facing outputs.
+
+## Project profile
+
+- Domain: InsurTech Knowledge Operations
 - Project type: `rag`
-- Tags: haystack, rag, pipelines, llm
+- Tags: insurance, policy-qa, rag, claims
 
-## Quick Start
+## Workflow
+
+1. Ingest the operational context for the user and case.
+2. Score risk, quality, or opportunity using the project API.
+3. Compare current signals against a business baseline.
+4. Generate a recommendation or operator brief for the next step.
+
+## Quick start
+
 ```bash
 python -m venv .venv
 source .venv/bin/activate
@@ -24,7 +42,8 @@ uvicorn src.app.main:app --host 0.0.0.0 --port 8000 --reload
 
 Open `http://localhost:8000/` to use the interactive application.
 
-## Key Endpoints
+## Key endpoints
+
 - `GET /`
 - `GET /health`
 - `GET /bootstrap`
@@ -34,19 +53,10 @@ Open `http://localhost:8000/` to use the interactive application.
 - `POST /query`
 - `POST /recommend`
 
-## Structure
-```text
-haystack-pipeline-architect/
-|- configs/
-|- data/
-|- demo/
-|- docs/
-|- scripts/
-|- src/app/
-|- src/app/web/
-|- tests/
-|- .github/workflows/
-|- Dockerfile
-|- docker-compose.yml
-|- Makefile
-```
+## Documentation
+
+- [Architecture](docs/architecture.md)
+- [Evaluation](docs/evaluation.md)
+- [Runbook](docs/runbook.md)
+- [Innovation memo](research/innovation_memo.md)
+- [Upstream audit](research/upstream_audit.md)

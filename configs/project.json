@@ -1,70 +1,54 @@
 {
   "slug": "haystack-pipeline-architect",
-  "title": "Haystack Pipeline Architect",
+  "title": "Insurance Policy Q&A Assistant",
   "project_type": "rag",
-  "domain": "Production LLM Pipelines",
-  "summary": "Turn composable retrieval and generation pipelines into a product-grade architecture surface with routing, testing, and pipeline observability.",
+  "domain": "InsurTech Knowledge Operations",
+  "summary": "Help claims and underwriting teams retrieve policy clauses, exclusions, and evidence-backed guidance from policy manuals and endorsements.",
   "tags": [
-    "haystack",
+    "insurance",
+    "policy-qa",
     "rag",
-    "pipelines",
-    "llm"
+    "claims"
   ],
   "accent": "#2cc848",
   "secondary_accent": "#692ca9",
   "dashboard_metrics": [
     {
-      "label": "Grounded Recall",
-      "value": "85%",
-      "delta": "+4.6%"
+      "label": "Clause Match Rate",
+      "value": "91%",
+      "delta": "+6.2%"
     },
     {
-      "label": "Citation Coverage",
-      "value": "83%",
-      "delta": "+3.1%"
+      "label": "Handling Time",
+      "value": "18.4h",
+      "delta": "-3.1h"
     },
     {
-      "label": "Latency",
-      "value": "177ms",
-      "delta": "-18ms"
+      "label": "Escalations",
+      "value": "11%",
+      "delta": "-2.4%"
     }
   ],
   "sample_features": {
-    "query": "Summarize the highest priority risk and recommended next step.",
-    "audience": "ops"
+    "policy_form": "HO-3",
+    "claim_type": "water_damage",
+    "state": "TX",
+    "endorsement_count": 4,
+    "severity_band": "medium"
   },
   "sample_metrics": {
-    "acquisition": 54.9,
-    "activation": 50.5,
-    "retention": 60.8,
-    "revenue": 103.3
+    "retrieval_precision": 0.91,
+    "citation_coverage": 0.95,
+    "case_cycle_time_hours": 18.4,
+    "escalation_rate": 0.11
   },
   "knowledge_base": [
-    "Haystack Pipeline Architect is positioned as a Production LLM Pipelines starter that emphasizes fast iteration, clear documentation, and production-friendly interfaces.",
-    "The primary value proposition is: Turn composable retrieval and generation pipelines into a product-grade architecture surface with routing, testing, and pipeline observability.",
-    "Recommended operating model: ship a small API, add observability, validate outputs with stakeholder review, and monitor the top business KPI every week.",
-    "Typical stakeholders include analytics, operations, product, and leadership teams working on haystack, rag, pipelines, llm.",
-    "Source paper: Haystack",
-    "Official repo: https://github.com/deepset-ai/haystack",
-    "Production differentiation focus: Expose retrieval traces and grounding behavior through a product-style interface for production llm pipelines.; Add production packaging, docs, health endpoints, and screenshots instead of stopping at a notebook or script.; Turn retrieval quality into something operators can tune and explain to non-ML stakeholders."
+    "User: claims reviewers and underwriters who need faster coverage decisions.",
+    "Primary pain: searching fragmented policy language and endorsements under time pressure.",
+    "Decision output: clause-backed answer with next-step guidance and escalation signals.",
+    "Business impact: faster handling times and fewer coverage interpretation errors."
   ],
-  "research_key": "haystack-pipeline-architect",
-  "research_score": 9.71,
-  "paper_title": "Haystack",
-  "paper_url": "https://github.com/deepset-ai/haystack",
-  "repo_url": "https://github.com/deepset-ai/haystack",
-  "repo_org": "deepset-ai",
-  "why_high_score": [
-    "Official or primary upstream repo with 24844 GitHub stars.",
-    "Active maintenance signal with recent push at 2026-04-15T18:00:21Z.",
-    "Open-source AI orchestration framework for building context-engineered, production-ready LLM applications. Design modular pipelines and agent workflows with explicit control over retrieval, routing, memory, and generation. Built for scalable agents, RAG, multimodal applications, semantic search, and conversational systems."
-  ],
-  "differentiation_hooks": [
-    "Expose retrieval traces and grounding behavior through a product-style interface for production llm pipelines.",
-    "Add production packaging, docs, health endpoints, and screenshots instead of stopping at a notebook or script.",
-    "Turn retrieval quality into something operators can tune and explain to non-ML stakeholders."
-  ],
-  "app_archetype": "navigator",
+  "app_archetype": "watchtower",
   "ui_profile": {
     "layout": "console",
     "surface": "sand",
@@ -78,36 +62,36 @@
   },
   "app_modules": [
     {
-      "label": "Query 01",
-      "title": "Grounded Question",
-      "description": "Ask a domain question and retrieve the most relevant context from the local knowledge base.",
+      "label": "Claims 01",
+      "title": "Coverage Question",
+      "description": "Ask a policy question for a live claim and retrieve the most relevant policy language.",
       "endpoint": "/query",
       "input_mode": "text",
-      "cta": "Search Context",
-      "prefill": "What is the top priority recommendation for Haystack Pipeline Architect?",
-      "hint": "Grounded answer and supporting contexts will appear here.",
+      "cta": "Find Coverage",
+      "prefill": "Does endorsement language allow payout for interior water damage after roof wear and tear?",
+      "hint": "Grounded clause answer appears here.",
       "span": "wide"
     },
     {
-      "label": "Query 02",
-      "title": "Retrieval Quality Review",
-      "description": "Compare retrieval-side metrics against a baseline before changing prompt or chunking strategy.",
+      "label": "Claims 02",
+      "title": "Policy Fit Review",
+      "description": "Compare the current claim profile against baseline coverage and escalation patterns.",
       "endpoint": "/analyze",
       "input_mode": "json",
-      "cta": "Review Quality",
-      "prefill": "{\n  \"metrics\": {\n    \"acquisition\": 54.9,\n    \"activation\": 50.5,\n    \"retention\": 60.8,\n    \"revenue\": 103.3\n  },\n  \"baseline\": {\n    \"acquisition\": 50.51,\n    \"activation\": 46.46,\n    \"retention\": 55.94,\n    \"revenue\": 95.04\n  }\n}",
-      "hint": "Quality delta summary will appear here.",
+      "cta": "Review Risk",
+      "prefill": "{\n  \"metrics\": {\n    \"approved_rate\": 71.0,\n    \"escalation_rate\": 11.0,\n    \"cycle_time_hours\": 18.4\n  },\n  \"baseline\": {\n    \"approved_rate\": 68.0,\n    \"escalation_rate\": 13.4,\n    \"cycle_time_hours\": 21.5\n  }\n}",
+      "hint": "Coverage and escalation movement appears here.",
       "span": "normal"
     },
     {
-      "label": "Query 03",
-      "title": "Response Playbook",
-      "description": "Generate a recommended follow-up workflow grounded in the project context.",
+      "label": "Claims 03",
+      "title": "Adjuster Brief",
+      "description": "Generate the next-step brief an adjuster can use before finalizing the claim decision.",
       "endpoint": "/recommend",
       "input_mode": "json",
-      "cta": "Build Response",
-      "prefill": "{\n  \"prompt\": \"Recommend the next best action for Haystack Pipeline Architect.\",\n  \"features\": {\n    \"query\": \"Summarize the highest priority risk and recommended next step.\",\n    \"audience\": \"ops\"\n  },\n  \"metrics\": {\n    \"acquisition\": 54.9,\n    \"activation\": 50.5,\n    \"retention\": 60.8,\n    \"revenue\": 103.3\n  }\n}",
-      "hint": "Recommended workflow steps will appear here.",
+      "cta": "Draft Brief",
+      "prefill": "{\n  \"prompt\": \"Draft the next best action for a homeowners water damage claim.\",\n  \"features\": {\n    \"policy_form\": \"HO-3\",\n    \"claim_type\": \"water_damage\",\n    \"endorsement_count\": 4\n  },\n  \"metrics\": {\n    \"retrieval_precision\": 0.91,\n    \"citation_coverage\": 0.95\n  }\n}",
+      "hint": "Adjuster-ready guidance appears here.",
       "span": "normal"
     }
   ]

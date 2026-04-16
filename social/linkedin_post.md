@@ -1,19 +1,16 @@
-Today I shipped **Haystack Pipeline Architect**, a research-backed Production LLM Pipelines project inspired by **Haystack**.
+Shipped **Insurance Policy Q&A Assistant** today.
 
-        What I changed from the base research or repo:
-        1. Expose retrieval traces and grounding behavior through a product-style interface for production llm pipelines.
-2. Add production packaging, docs, health endpoints, and screenshots instead of stopping at a notebook or script.
-3. Turn retrieval quality into something operators can tune and explain to non-ML stakeholders.
+This one is built around a real workflow for **Claims reviewers and underwriters**.
 
-I also reviewed the upstream repo and focused on gaps like: No dedicated docs directory detected for architecture or operations guidance.
+Problem:
+Teams lose time searching policy endorsements, exclusions, and adjuster guidance while claims sit in queue.
 
-        Why it matters:
-        - easier to demo
-        - easier to operate
-        - easier to explain to product, analytics, and engineering teams
+What it helps decide:
+Return the right clause and recommended next action for each claim scenario.
 
-        Repo: https://github.com/R-behera/haystack-pipeline-architect
-        Paper: https://github.com/deepset-ai/haystack
-        Screenshot: demo/screenshot.png
+Why that matters:
+Lower claim handling time and reduce coverage misinterpretation.
 
-        #haystack #rag #pipelines #llm #AI #MachineLearning #LLM #DataScience
+Repo: https://github.com/R-behera/haystack-pipeline-architect
+
+#insurance #policyqa #rag #claims #AI #MachineLearning #DataScience

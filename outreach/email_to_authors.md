@@ -1,69 +1,21 @@
-# Outreach email drafts
+# Outreach draft
 
-## Draft for Paper authors
+Subject: Production-style adaptation of Insurance Policy Q&A Assistant
 
-                - To: [add-public-contact-email]
-                - Subject: Built a production-grade adaptation of Haystack
+Hi,
 
-                Hi Paper authors,
+I adapted this project into a more concrete real-world workflow for Claims reviewers and underwriters.
 
-                I built **Haystack Pipeline Architect**, a production-style adaptation inspired by your work on **Haystack**.
+Problem:
+Teams lose time searching policy endorsements, exclusions, and adjuster guidance while claims sit in queue.
 
-                What I changed:
-                - Expose retrieval traces and grounding behavior through a product-style interface for production llm pipelines.
-                - Add production packaging, docs, health endpoints, and screenshots instead of stopping at a notebook or script.
-                - Turn retrieval quality into something operators can tune and explain to non-ML stakeholders.
+Decision improved:
+Return the right clause and recommended next action for each claim scenario.
 
-                What I noticed in the upstream code or packaging:
-                - No dedicated docs directory detected for architecture or operations guidance.
-- No container packaging signal detected, which makes demos and deployment less portable.
-- Mixed filename conventions detected: PascalCase, kebab-case, snake_case.
+Business impact target:
+Lower claim handling time and reduce coverage misinterpretation.
 
-                Why that difference matters:
-                - It makes the system easier to run and explain in a product setting.
-                - It turns the research direction into something operators and stakeholders can actually use.
-                - It creates clearer evaluation and demo artifacts, including UI screenshots and runbooks.
+Repo: https://github.com/R-behera/haystack-pipeline-architect
 
-                Repo: https://github.com/R-behera/haystack-pipeline-architect
-                Paper: https://github.com/deepset-ai/haystack
-
-                If useful, I would love any feedback on whether this production framing captures the spirit of the original work well.
-
-                Best,
-                Rajendra Behera
-
-                Note: Add a public email or preferred contact channel before sending.
-
-## Draft for OSS maintainers
-
-                - To: [add-public-contact-email]
-                - Subject: Built a production-grade adaptation of Haystack
-
-                Hi OSS maintainers,
-
-                I built **Haystack Pipeline Architect**, a production-style adaptation inspired by your work on **Haystack**.
-
-                What I changed:
-                - Expose retrieval traces and grounding behavior through a product-style interface for production llm pipelines.
-                - Add production packaging, docs, health endpoints, and screenshots instead of stopping at a notebook or script.
-                - Turn retrieval quality into something operators can tune and explain to non-ML stakeholders.
-
-                What I noticed in the upstream code or packaging:
-                - No dedicated docs directory detected for architecture or operations guidance.
-- No container packaging signal detected, which makes demos and deployment less portable.
-- Mixed filename conventions detected: PascalCase, kebab-case, snake_case.
-
-                Why that difference matters:
-                - It makes the system easier to run and explain in a product setting.
-                - It turns the research direction into something operators and stakeholders can actually use.
-                - It creates clearer evaluation and demo artifacts, including UI screenshots and runbooks.
-
-                Repo: https://github.com/R-behera/haystack-pipeline-architect
-                Paper: https://github.com/deepset-ai/haystack
-
-                If useful, I would love any feedback on whether this production framing captures the spirit of the original work well.
-
-                Best,
-                Rajendra Behera
-
-                Note: If no public email exists, prefer GitHub Discussions or Issues.
+Best,
+Rajendra Behera

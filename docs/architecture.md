@@ -1,10 +1,22 @@
-
 # Architecture
 
-Haystack Pipeline Architect is structured as a compact production-style starter:
+## Problem framing
 
-1. `configs/project.json` stores project metadata, sample features, and a small local knowledge base.
-2. `src/app/engine.py` holds the scoring, analysis, and retrieval logic.
-3. `src/app/main.py` exposes FastAPI endpoints plus the application shell at `/`.
-4. `src/app/web/` contains the interactive browser app and `demo/` mirrors those assets for screenshots and repo previews.
-5. `.github/workflows/ci.yml` runs a lightweight validation pass in CI.
+- User: Claims reviewers and underwriters
+- Problem: Teams lose time searching policy endorsements, exclusions, and adjuster guidance while claims sit in queue.
+- Decision: Return the right clause and recommended next action for each claim scenario.
+
+## System flow
+
+1. A user submits case context, business signals, or a search question.
+2. The API exposes scoring, analysis, and recommendation endpoints.
+3. The web application turns those outputs into an operator-facing workflow.
+4. Observability, docs, and runbooks make the project easier to evaluate and extend.
+
+## Production posture
+
+- Separate app, docs, demo, and data folders
+- Container-ready packaging
+- API endpoints for health and workflow actions
+- Screenshot-ready demo surface
+- Research and upstream audit artifacts included in-repo
