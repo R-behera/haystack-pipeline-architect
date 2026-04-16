@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Paper authors",
+    "email": "",
+    "relationship": "research",
+    "notes": "Add a public email or preferred contact channel before sending."
+  },
+  {
+    "name": "OSS maintainers",
+    "email": "",
+    "relationship": "open_source",
+    "notes": "If no public email exists, prefer GitHub Discussions or Issues."
+  }
+]

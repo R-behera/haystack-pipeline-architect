@@ -1,0 +1,40 @@
+# Upstream audit
+
+        - Paper anchor: Haystack
+        - Upstream repo: https://github.com/deepset-ai/haystack
+        - Local clone: /Users/Rb/Documents/LLM based projects /sources/deepset-ai__haystack
+        - Branch: main
+        - Commit: b25cd77288b4d984251790a86db490987ad54958
+        - File count scanned: 6500
+        - Text files scanned: 2771
+
+        ## Strengths
+
+        - Repository has a top-level README.
+- Repository appears to include a test surface.
+- Repository has GitHub Actions or another CI entry point.
+
+        ## Findings
+
+        - No dedicated docs directory detected for architecture or operations guidance.
+- No container packaging signal detected, which makes demos and deployment less portable.
+- Mixed filename conventions detected: PascalCase, kebab-case, snake_case.
+- Open maintenance markers detected: FIXME in 1 file(s), TODO in 7 file(s), XXX in 2 file(s).
+- Large files that may benefit from decomposition: test/test_files/json/azure_sample_pdf_1.json (9623 lines), test/test_files/json/azure_sample_pdf_1_no_table_bounding_region.json (9600 lines), test/test_files/json/azure_sample_pdf_2.json (5480 lines).
+
+        ## Dominant file types
+
+        - `.mdx`: 3633
+- `.md`: 1054
+- `.yaml`: 1022
+- `.py`: 555
+- `.yml`: 63
+- `.png`: 34
+- `.json`: 33
+- `.js`: 14
+
+        ## Maintenance markers
+
+        - TODO: pyproject.toml, haystack/components/evaluators/document_ndcg.py, haystack/components/extractors/named_entity_extractor.py, haystack/core/pipeline/pipeline.py, test/core/test_type_utils.py, test/components/generators/chat/test_openai_responses_conversion.py, test/core/pipeline/test_pipeline_base.py
+- FIXME: haystack/telemetry/_telemetry.py
+- XXX: releasenotes/notes/remove-image-from-debug-c83d61db92bcbfc2.yaml, haystack/components/preprocessors/document_cleaner.py
